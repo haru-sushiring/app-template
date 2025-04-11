@@ -1,26 +1,23 @@
 # app-template
 
-.gitを除く、コピーコマンド
+## .gitを除く、コピーコマンド
 ```
-rsync -av --progress app-template/ chatEnglish2/ --exclude='.git' --exclude='README.md'
+rsync -av --progress app-template/ コピー先ディレクトリ/ --exclude='.git' --exclude='README.md'
 ```
-Dockerコマンド
+## Dockerコマンド
 
 ```
 docker-compose up --build
 ```
 
-Laravelインストール
+## Laravelインストール
 ```
-docker-compose exec api bash
-```
-```
-composer create-project laravel/laravel:^11.0 .
+composer create-project laravel/laravel:^11.0 app
 ```
 
-next.jsインストール
+## next.jsインストール
 ```
-npx create-next-app@14.2.0 . \
+npx create-next-app@14.2.0 src \
   --ts \
   --tailwind \
   --eslint \
